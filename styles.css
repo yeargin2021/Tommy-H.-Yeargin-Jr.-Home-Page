@@ -1,0 +1,13 @@
+.p-footer {
+    font-size: 12px;
+}
+
+.thick-line {
+    height: 3.0px;
+    color: rgb(255, 255, 255);
+}
+
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+}
