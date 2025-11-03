@@ -1,3 +1,341 @@
-Is that the end?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommy H. Yeargin Jr.</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #1e7eed;
+            --light-blue: #e7f3ff;
+            --dark-blue: #003d82;
+            --text-dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .profile-img-placeholder {
+            width: 200px;
+            height: 200px;
+            background-color: var(--light-blue);
+            border: 3px solid var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: var(--primary-blue);
+            margin: 0 auto 20px;
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--secondary-blue);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 86, 179, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+            border-color: var(--dark-blue);
+        }
+        
+        .social-icons {
+            font-size: 2rem;
+        }
+        
+        .social-icons a {
+            color: var(--primary-blue);
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary-blue);
+        }
+        
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        
+        .update-card {
+            background: linear-gradient(45deg, var(--light-blue), #f8f9fa);
+            border-left: 4px solid var(--secondary-blue);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-primary" href="#home">Tommy H. Yeargin Jr.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#updates">Updates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-NO!
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <div class="profile-img-placeholder">
+                <div>
+                    <i class="fas fa-user fa-3x mb-2"></i>
+                    <div style="font-size: 14px;">Profile Picture</div>
+                    <small style="font-size: 12px;">Place image in assets/images/</small>
+                </div>
+            </div>
+            <h1 class="display-3 fw-bold mb-3">Tommy H. Yeargin Jr.</h1>
+            <p class="lead mb-4">Welcome to my personal website</p>
+            <a href="#about" class="btn btn-light btn-lg">Learn More About Me</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title text-center">About Me</h2>
+                    <div class="card p-4">
+                        <p class="lead text-center mb-4">
+                            Add your personal story and background here.
+                        </p>
+                        <p>
+                            This is where you can write about yourself, your interests, career, hobbies, 
+                            achievements, and what makes you unique. Feel free to customize this section 
+                            with your own personal information.
+                        </p>
+                        <p>
+                            You can talk about your professional background, education, personal interests, 
+                            or anything else you'd like visitors to know about you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Section -->
+    <section id="updates" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">What's Going On</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="update-card card p-4 mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0 text-primary">Recent Update</h5>
+                            <small class="text-muted">November 2025</small>
+                        </div>
+                        <p class="mb-0">
+                            Share your latest news, projects, achievements, or life updates here. 
+                            This section can be regularly updated to keep visitors informed about what you're up to.
+                        </p>
+                    </div>
+                    
+                    <div class="update-card card p-4 mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0 text-primary">Previous Update</h5>
+                            <small class="text-muted">October 2025</small>
+                        </div>
+                        <p class="mb-0">
+                            Add more updates as needed. You can share accomplishments, new projects, 
+                            travel experiences, or any other noteworthy events in your life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faq1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    What do you do for work?
+                                </button>
+                            </h3>
+                            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Add your professional information here. Describe your career, current role, 
+                                    or business activities.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    What are your interests and hobbies?
+                                </button>
+                            </h3>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Share your personal interests, hobbies, and activities you enjoy in your free time.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    How can people collaborate with you?
+                                </button>
+                            </h3>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Describe opportunities for collaboration, partnerships, or ways people can work with you.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center">
+                    <p class="lead mb-4">
+                        I'd love to hear from you! Feel free to reach out through any of the following methods.
+                    </p>
+                    
+                    <div class="card p-4">
+                        <h5 class="text-primary mb-3">Contact Information</h5>
+                        <p><i class="fas fa-envelope text-primary me-2"></i> your.email@example.com</p>
+                        <p><i class="fas fa-phone text-primary me-2"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt text-primary me-2"></i> Your City, State</p>
+                        
+                        <hr>
+                        
+                        <h6 class="text-primary mb-3">Or send me a message:</h6>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="social-icons text-center text-md-start mb-3 mb-md-0">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook text-white"></i></a>
+                        <a href="#" aria-label="X"><i class="fab fa-x text-white"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube text-white"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram text-white"></i></a>
+                        <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat text-white"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p class="text-center text-md-end mb-0">
+                        &copy; 2025 Tommy H. Yeargin Jr. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth scrolling for navigation links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
