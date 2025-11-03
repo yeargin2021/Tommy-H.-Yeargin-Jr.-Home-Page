@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}{{ site_name }} - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-5 mb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold text-primary mb-4">{{ site_name }}</h1>
+                <p class="lead text-muted mb-4">Welcome to my website. Thanks for stopping by!</p>
+                <div class="hero-badges">
+                    <span class="badge bg-primary fs-6 me-2">
+                        <i class="fas fa-gem me-1"></i>Bench Jeweler Since 1989
+                    </span>
+                    <span class="badge bg-secondary fs-6">
+                        <i class="fas fa-code me-1"></i>Coding Enthusiast
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="row g-4">
+        <!-- 25 Books in '25 Section -->
+        <div class="col-lg-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-book-open me-2"></i>25 Books in '25
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {% if books %}
+                        <div class="books-list">
+                            {% for book in books %}
+                                <div class="book-item mb-3 p-3 border-start border-primary border-3 bg-light">
+                                    <div class="book-number badge bg-primary mb-2">{{ loop.index }}</div>
+                                    <h6 class="fw-bold mb-1">"{{ book.title }}"</h6>
+                                    <p class="text-muted mb-1">by {{ book.author }}</p>
+                                    {% if book.isbn %}
+                                        <small class="text-muted d-block">ISBN: {{ book.isbn }}</small>
+                                    {% endif %}
+                                    <small class="text-success">
+                                        <i class="fas fa-calendar-check me-1"></i>Read: {{ book.date_read }}
+                                    </small>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p class="text-muted">Reading list coming soon...</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="col-lg-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-secondary text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-user me-2"></i>About Me
+                    </h3>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <p class="card-text">{{ site_description }}</p>
+                    
+                    <div class="skills-section mt-auto">
+                        <h6 class="fw-bold mb-3">Skills & Interests</h6>
+                        <div class="skills-tags">
+                            <span class="badge bg-outline-primary me-2 mb-2">Jewelry Making</span>
+                            <span class="badge bg-outline-primary me-2 mb-2">Goldsmithing</span>
+                            <span class="badge bg-outline-primary me-2 mb-2">Python Programming</span>
+                            <span class="badge bg-outline-primary me-2 mb-2">Web Development</span>
+                            <span class="badge bg-outline-primary me-2 mb-2">Reading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-envelope me-2"></i>Contact Me
+                    </h3>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-4">If you have any questions, please feel free to contact me.</p>
+                    <a href="https://forms.gle/Vy8eDRaJoKtL8uBV6" 
+                       target="_blank" 
+                       class="btn btn-success btn-lg">
+                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h3 class="card-title mb-0">
+                        <i class="fas fa-external-link-alt me-2"></i>Quick Access
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="{{ url_for('main.links') }}" class="btn btn-outline-info">
+                            <i class="fas fa-link me-2"></i>Useful Links
+                        </a>
+                        <a href="{{ url_for('main.blog') }}" class="btn btn-outline-info">
+                            <i class="fas fa-blog me-2"></i>Visit My Blog
+                        </a>
+                        <a href="https://www.goodreads.com/user/show/185458726-tommy-yeargin" 
+                           target="_blank" 
+                           class="btn btn-outline-info">
+                            <i class="fab fa-goodreads me-2"></i>Goodreads Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
